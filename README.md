@@ -1,13 +1,6 @@
 # SQL Reporting Assessment
 
-This project generates a report showing daily lead and order activity by lead source over the last 30 days. It includes:
-
-- Valid leads  
-- New clients  
-- Total orders  
-- Total order value
-
----
+This project generates a report showing daily lead and order activity by lead source over the last 30 days.
 
 ## Files
 
@@ -23,33 +16,34 @@ This project generates a report showing daily lead and order activity by lead so
 - `create-index.sql`  
   Adds indexes to speed up query execution time. See the analysis below for details.
 
+
 ---
 
 ## How to Run
 
-1. Create your PostgreSQL database:
+1. Create PostgreSQL database:
 
     ```bash
-    psql -U your_user -c "CREATE DATABASE your_db;"
+    psql -U postgres -c "CREATE DATABASE nerdy_sql_test;"
     ````
 
 2. Set up the schema and data:
 
     ```bash
-    psql -U your_user -d your_db -f sql/create-table.sql
-    psql -U your_user -d your_db -f sql/insert-sample-data.sql
+    psql -U postgres -d nerdy_sql_test -f sql/create-table.sql
+    psql -U postgres -d nerdy_sql_test -f sql/insert-sample-data.sql
     ```
 
-3. (Optional) Add indexes to improve performance:
+3. Add indexes to improve performance:
 
     ```bash
-    psql -U your_user -d your_db -f sql/create-index.sql
+    psql -U postgres -d nerdy_sql_test -f sql/create-index.sql
     ```
 
 4. Run the report query:
 
     ```bash
-    psql -U your_user -d your_db -f sql/main-query.sql
+    psql -U postgres -d nerdy_sql_test -f sql/main-query.sql
     ```
 
 ---
