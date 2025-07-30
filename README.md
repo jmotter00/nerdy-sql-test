@@ -61,10 +61,12 @@ To improve performance, I created `create-index.sql` which adds indexes to:
 These indexes help PostgreSQL avoid full table scans and use faster indexed lookups.
 
 **Before Optimization:**
+
 ![Original execution time](imgs/1.png)
 
 **After Running Index Script:**
 Execution time improved to **1.115 ms**, which is approximately **82.6% of the original time**.
+
 ![Improved execution time](imgs/2.png)
 
 
