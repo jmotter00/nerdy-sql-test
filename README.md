@@ -36,20 +36,20 @@ This project generates a report showing daily lead and order activity by lead so
 2. Set up the schema and data:
 
     ```bash
-    psql -U your_user -d your_db -f create-table.sql
-    psql -U your_user -d your_db -f insert-sample-data.sql
+    psql -U your_user -d your_db -f sql/create-table.sql
+    psql -U your_user -d your_db -f sql/insert-sample-data.sql
     ```
 
 3. (Optional) Add indexes to improve performance:
 
     ```bash
-    psql -U your_user -d your_db -f create-index.sql
+    psql -U your_user -d your_db -f sql/create-index.sql
     ```
 
 4. Run the report query:
 
     ```bash
-    psql -U your_user -d your_db -f main-query.sql
+    psql -U your_user -d your_db -f sql/main-query.sql
     ```
 
 ---
