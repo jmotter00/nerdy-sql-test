@@ -5,7 +5,7 @@ This project generates a report showing daily lead and order activity by lead so
 - Valid leads  
 - New clients  
 - Total orders  
-- Total order value (in dollars)
+- Total order value
 
 ---
 
